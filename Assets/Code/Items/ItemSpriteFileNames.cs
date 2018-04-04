@@ -5,12 +5,14 @@ using System.Text;
 
 namespace Assets.Code.Inventory.Items
 {
-   public enum ItemSpriteFileNames
+    public enum ItemSpriteFileNames
     {
-        RedMineral,
+
+        BlueMineral,
         BlackLiquid,
-        Energy,
         DarkBall,
+        Energy,
+        RedMineral,
         Slime,
         Tubelastics
 

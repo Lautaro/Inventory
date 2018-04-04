@@ -1,18 +1,23 @@
 ﻿using Assets.Code.Inventory.Items;
-using System.Collections;
+using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
 using UnityEngine;
 
-public class RedMineral : ItemBase {
+namespace Assets.Code
+{
+    
+  public class RedMineral : ItemBase
+    {
+       
+        //string spriteName = ItemSpriteFileNames.RedMineral.ToString();
+        //int amount = 58;
 
-	// Use this for initialization
-	void Start () {
-        SpriteName = ItemSpriteFileNames.RedMineral.ToString();
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+        public RedMineral()
+        {   
+            Name = "Red Mineral";
+        }
+        
+    }
 }

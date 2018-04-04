@@ -9,28 +9,24 @@ using UnityEngine.UI;
 public class ItemContainer : MonoBehaviour
 {
 
-    [SerializeField]
-    private ItemBase stack;
 
-    public ItemBase Stack
+    public ItemBase item;
+
+    public ItemBase Item
     {
         get
         {
-            return stack;
+            return Item;
         }
 
         set
         {
             print("New stack set");
-            stack = value;
+            Item = value;
         }
     }
 
 
-    private void Update()
-    {
- 
-    }
 
     /* public void MergeSlots(ItemContainer mergeStack)
      {
