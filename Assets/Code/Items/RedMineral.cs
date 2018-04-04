@@ -11,12 +11,13 @@ namespace Assets.Code
   public class RedMineral : ItemBase
     {
        
-        //string spriteName = ItemSpriteFileNames.RedMineral.ToString();
+        
         //int amount = 58;
 
         public RedMineral()
         {   
             Name = "Red Mineral";
+            spriteName = "RedMineral";
         }
         
     }

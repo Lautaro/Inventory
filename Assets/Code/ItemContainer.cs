@@ -16,13 +16,13 @@ public class ItemContainer : MonoBehaviour
     {
         get
         {
-            return Item;
+            return item;
         }
 
         set
         {
             print("New stack set");
-            Item = value;
+            item = value;
         }
     }
 

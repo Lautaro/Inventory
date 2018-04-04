@@ -13,15 +13,19 @@ public class InventorySlot : ItemContainer {
      Image Icon;
      Text AmountText;
     public int Amount;
-
-    [SerializeField]
-    new public ItemBase Item;
-    
+        
     void Start () {
         var thing = new RedMineral();
         Item = thing;
         print(Item.Name);
-        //Icon = transform.Find("Icon").GetComponent<Image>();
+        Icon = GameObject.Find("Icon").GetComponent<Image>();
+
+        var path = thing.GetIconSpriteFilePath();
+        print(path);
+        var sprite = Resources.Load<Sprite>(path);
+        print(sprite.name);
+        Icon.sprite = sprite;
+
         //AmountText = transform.Find("Amount").GetComponentInChildren<Text>();
         //AmountText.text = Stack.Amount.ToString();
 

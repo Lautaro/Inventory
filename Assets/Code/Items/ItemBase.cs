@@ -6,7 +6,7 @@ using UnityEngine;
 
 public  class ItemBase   {
 
-    public string Name;
+    internal string Name;
 
     //int maxAmount = 100;
     //public int MaxAmount
@@ -31,12 +31,12 @@ public  class ItemBase   {
     //    }
     //}
 
-    //internal string spriteDirectoryPath = "InventoryIcons/";
-    //string spriteName = "YellowBall";
+     string spriteDirectoryPath = "InventoryIcons/";
+    internal string spriteName = "YellowBall";
 
 
-    //public string GetIconSpriteFilePath()
-    //{
-    //    return spriteDirectoryPath + spriteName;
-    //}
+    public string GetIconSpriteFilePath()
+    {
+        return spriteDirectoryPath + spriteName;
+    }
 }
