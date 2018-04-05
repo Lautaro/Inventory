@@ -7,10 +7,12 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    class BlueMineral : ItemBase
+    public class BlueMineral : ItemBase
     {
-        new string Name = "Blue Mineral";
-        string spriteName = ItemSpriteFileNames.Slime.ToString();
-        int amount = 70;
+        public BlueMineral(int amount): base(amount)
+        {
+            Name = "Blue Mineral";
+            spriteName = "BlueMineral";
+        }
     }
 }

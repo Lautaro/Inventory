@@ -8,7 +8,7 @@ using UnityEngine.UI;
 /// <summary>
 /// En UI representation av en stack
 /// </summary>
-public class InventorySlot : ItemContainer
+public class HandInventory : ItemContainer
 {
 
     Image Icon;
@@ -18,7 +18,7 @@ public class InventorySlot : ItemContainer
     {
         Icon = transform.Find("Icon").GetComponent<Image>();
         AmountText = transform.Find("Amount/Text").GetComponent<Text>();
-        
+        print(AmountText);
     }
 
     private void Update()

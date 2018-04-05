@@ -9,16 +9,11 @@ namespace Assets.Code
 {
     
   public class RedMineral : ItemBase
-    {
-       
-        
-        //int amount = 58;
-
-        public RedMineral()
+    {   
+        public RedMineral(int amount): base(amount)
         {   
             Name = "Red Mineral";
             spriteName = "RedMineral";
-        }
-        
+        }        
     }
 }

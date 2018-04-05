@@ -2,41 +2,73 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 
-public  class ItemBase   {
+public class ItemBase
+{
 
-    internal string Name;
+    #region Statics
+    static string spriteDirectoryPath = "InventoryIcons/";
+    #endregion
 
-    //int maxAmount = 100;
-    //public int MaxAmount
-    //{
-    //    get
-    //    {
-    //        return maxAmount;
-    //    }
-    //}
+    public ItemBase(int amount)
+    {
+        Amount = amount;
+    }
 
-    //int amount = 23;
-    //public int Amount
-    //{
-    //    get
-    //    {
-    //        return Amount;
-    //    }
-
-    //    set
-    //    {
-    //        Amount = value;
-    //    }
-    //}
-
-     string spriteDirectoryPath = "InventoryIcons/";
     internal string spriteName = "YellowBall";
 
-
-    public string GetIconSpriteFilePath()
+    Sprite icon;
+    public Sprite Icon
     {
-        return spriteDirectoryPath + spriteName;
+        get
+        {
+            if (icon != null)
+            {
+                return icon;
+            }
+            else
+            {
+                var path = spriteDirectoryPath + spriteName;
+                icon = Resources.Load<Sprite>(spriteDirectoryPath + spriteName);
+
+                return icon;
+            }
+        }
+        set
+        {
+            icon = value;
+        }
     }
+    
+
+    [SerializeField]
+    public string Name;
+
+    int maxAmount = 100;
+    public int MaxAmount
+    {
+        get
+        {
+            return maxAmount;
+        }
+    }
+
+    [SerializeField]
+    int amount = 23;
+    public int Amount
+    {
+        get
+        {
+            return amount;
+        }
+
+        set
+        {
+            amount = value;
+        }
+    }
+
+
 }

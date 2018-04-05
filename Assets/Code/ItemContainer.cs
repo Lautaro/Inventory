@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -6,16 +7,25 @@ using UnityEngine.UI;
 /// <summary>
 /// A container where a stack of items is kept
 /// </summary>
+[Serializable]
 public class ItemContainer : MonoBehaviour
 {
 
-
-    public ItemBase item;
+    [SerializeField]
+     ItemBase item ;
 
     public ItemBase Item
     {
         get
         {
+            if (item == null)
+            {
+                return null;
+            }
+            else
+            {
+
+            }
             return item;
         }
 
@@ -23,9 +33,14 @@ public class ItemContainer : MonoBehaviour
         {
             print("New stack set");
             item = value;
+            OnItemSet();
         }
     }
 
+   public virtual void OnItemSet()
+    {
+
+    }
 
 
     /* public void MergeSlots(ItemContainer mergeStack)

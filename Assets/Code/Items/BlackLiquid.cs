@@ -7,11 +7,12 @@ using UnityEngine;
 
 namespace Assets.Code
 {
-    class BlackLiquid : ItemBase
+    public class BlackLiquid : ItemBase
     {
-        new string Name = "Black Liquid";
-        string spriteName = ItemSpriteFileNames.BlackLiquid.ToString();
-        int amount = 12;
-
+        public BlackLiquid(int amount) : base(amount)
+        {
+            Name = "Black Liquid";
+            spriteName = "BlackLiquid";
+        }
     }
 }
